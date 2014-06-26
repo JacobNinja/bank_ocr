@@ -26,3 +26,16 @@
               numbers)
          (apply str)
          (Integer/parseInt))))
+
+(defn valid-account-number? [n]
+  (let [[d9 d8 d7 d6 d5 d4 d3 d2 d1] (map #(Integer/parseInt (str %)) (str n))
+        checksum (+ d1
+                    (* 2 d2)
+                    (* 3 d3)
+                    (* 4 d4)
+                    (* 5 d5)
+                    (* 6 d6)
+                    (* 7 d7)
+                    (* 8 d8)
+                    (* 9 d9))]
+    (= 0 (mod checksum 11))))

@@ -31,4 +31,7 @@
   (testing "parse multiple numbers")
     (is (= 1234567890 (parse (concat-ascii ascii/one ascii/two ascii/three
                                            ascii/four ascii/five ascii/six
-                                           ascii/seven ascii/eight ascii/nine ascii/zero )))))
+                                           ascii/seven ascii/eight ascii/nine ascii/zero ))))
+  (testing "validate account number"
+    (is (valid-account-number? 457508000))
+    (is (= false (valid-account-number? 664371495)))))
