@@ -4,62 +4,55 @@
 ;   | _| _||_||_ |_   ||_||_|
 ;   ||_  _|  | _||_|  ||_| _|
 
+(defn make-ascii [& v]
+  (apply str v))
+
 (def zero
-  (vector " _  "
-          "| | "
-          "|_| "))
+  (make-ascii " _ "
+              "| |"
+              "|_|"))
 
 (def one
-  (vector "    "
-          "  | "
-          "  | "))
+  (make-ascii "   "
+              "  |"
+              "  |"))
 
 (def two
-  (vector " _  "
-          " _| "
-          "|_  "))
+  (make-ascii " _ "
+              " _|"
+              "|_ "))
 
 (def three
-  (vector " _  "
-          " _| "
-          " _| "))
+  (make-ascii " _ "
+              " _|"
+              " _|"))
 
 (def four
-  (vector "    "
-          "|_| "
-          "  | "))
+  (make-ascii "   "
+              "|_|"
+              "  |"))
 
 (def five
-  (vector " _  "
-          "|_  "
-          " _| "))
+  (make-ascii " _ "
+              "|_ "
+              " _|"))
 
 (def six
-  (vector " _  "
-          "|_  "
-          "|_| "))
+  (make-ascii " _ "
+              "|_ "
+              "|_|"))
 
 (def seven
-  (vector " _  "
-          "  | "
-          "  | "))
+  (make-ascii " _ "
+              "  |"
+              "  |"))
 
 (def eight
-  (vector " _  "
-          "|_| "
-          "|_| "))
+  (make-ascii " _ "
+              "|_|"
+              "|_|"))
 
 (def nine
-  (vector " _  "
-          "|_| "
-          " _| "))
-
-
-
-
-
-
-
-
-
-
+  (make-ascii " _ "
+              "|_|"
+              " _|"))
