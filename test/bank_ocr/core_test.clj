@@ -1,12 +1,13 @@
 (ns bank-ocr.core-test
   (:require [clojure.test :refer :all]
             [bank-ocr.core :refer :all]
-            [bank-ocr.ascii :as ascii])
-  (:import (java.io BufferedReader StringReader)))
+            [bank-ocr.ascii :as ascii]))
 
 (defn concat-ascii [& vs]
-  (apply str (apply interleave
-                    (map #(line-seq (BufferedReader. (StringReader. %))) vs))))
+  (apply str
+         (apply interleave
+                (map clojure.string/split-lines
+                     vs))))
 
 (def messed-up-one
   (ascii/make-ascii "   "

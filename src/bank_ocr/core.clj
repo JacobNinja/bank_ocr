@@ -1,7 +1,6 @@
 (ns bank-ocr.core
   (:require [bank-ocr.ascii :as ascii]
-            [clojure.string :as str])
-  (:import (java.io BufferedReader StringReader)))
+            [clojure.string :as str]))
 
 (def number-length 3)
 (def number-depth 3)
